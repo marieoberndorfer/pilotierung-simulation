@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Sprache -->
+<html lang="de">                                                                
+<head>
+    <!-- Was das? -->
+    <meta charset="UTF-8">                                                  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <!-- Name des Tabs -->
+    <title>Ausbreitung von Licht mit Canvas</title>      
+    <!-- Verlinkung zum CSS-Stylesheet -->                                                                      
+    <link rel="stylesheet" type="text/css" href="stylewithCanvas.css">                
+</head>
+<body>
+    <!--<h1>Wie breitet sich Licht von einer Lichtquelle aus? </h1>-->  
+    
+    <div class="canvas-wrapper">   
+        <div style="width: 2000px; height: 2000px;">
+            <canvas id="simulationcanvas" width="2000" height="2000"></canvas>
+            <img src="light.svg" class="light-icon" id="light-icon">
+        </div>
+    </div>
+
+    <div id="controlboard">
+        <div class="controlboard-row">     
+            <span>Licht</span>
+            <label class="switch">
+                <input id="light-switch" type="checkbox" >
+                <span class="slider"> </span>
+            </label>
+            <button id="pauseBtn">Stopp</button>
+        </div>
+        <div class="controlboard-row">
+            <span>gelber Farbfilter</span>
+            <label class="switch">                             
+                <input id="filter-switch" type="checkbox">
+                <span class="slider"></span> 
+            </label>
+            <button id="resetBtn">Zurücksetzen</button>
+        </div>
+        
+        <div class="controlboard-row">
+            <span>Lichtgeschwindigkeit</span>
+            <label class="switch">
+                <input id="lightspeed-switch" type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <script src="script_withCanvas.js"></script>                  <!-- Verbindung zur Funktion von Buttons -->
+</body>
+</html>
